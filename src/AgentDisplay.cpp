@@ -9,7 +9,7 @@
  * This file licensed under Mozilla Public License v2.0 http://mozilla.org/MPL/2.0/
  */
 
-#include "AgentDisplay.h"
+#ifdef MOVED_TO_AGENT_DISPLAY_H
 
 AgentDisplay::AgentDisplay(byte device_type, int device_pin, int device_num) {
   this->device_type = device_type;
@@ -70,3 +70,5 @@ void AgentDisplay::on() {
   ledMatrix->commit();
   enabled = true;
 }
+
+#endif

@@ -5,7 +5,7 @@
  * This file licensed under Mozilla Public License v2.0 http://mozilla.org/MPL/2.0/
  */
 
-#include <AgentLog.h>
+#ifdef MOVED_TO_AGENT_LOG_H
 
 void printTimestamp(Print* _logOutput) {
   char c[12];
@@ -31,3 +31,4 @@ void AgentLog::begin(const int log_level, Print *output) {
   // Start logging
   Log.notice("[LOGGER] Log started.");
 }
+#endif

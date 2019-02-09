@@ -9,7 +9,7 @@
  * This file licensed under Mozilla Public License v2.0 http://mozilla.org/MPL/2.0/
  */
 
-#include <AgentCom.h>
+#ifdef MOVED_TO_AGENT_COM_H
 
 void AgentCom::setup(const char *mqttServer, const int mqttPort) {
   WiFi.persistent(false);
@@ -90,3 +90,5 @@ void AgentCom::loop() {
     Log.error("[NTP] Failed to update the time.");
   }
 }
+
+#endif
